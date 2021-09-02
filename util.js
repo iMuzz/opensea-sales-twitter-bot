@@ -16,14 +16,13 @@ const download = (url, callback) => {
 const convertToPng = async () => {
   return new Promise((resolve, reject) => {
     sharp("./cached-loot.svg")
-      .png({
-        create: {
-          width: 350,
-          height: 350,
-        },
+      .resize(1000, 1000, {
+        fastShrinkOnLoad: false,
       })
+      .png({ quality: 100 })
       .toFile("cached-loot.png")
       .then(function (info) {
+        console.log(info);
         resolve(info);
       })
       .catch(function (err) {
@@ -56,8 +55,8 @@ module.exports = {
 };
 
 // const run = async () => {
-// await downloadAndCovertToPng(
-//   "https://storage.opensea.io/files/185fe4c7dd0e5a3f66b8fbcae6b4173f.svg"
-// );
+//   await downloadAndCovertToPng(
+//     "https://storage.opensea.io/files/185fe4c7dd0e5a3f66b8fbcae6b4173f.svg"
+//   );
 // };
 // run();
