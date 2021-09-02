@@ -52,7 +52,7 @@ const svg2img = require("svg2img");
 //   });
 // };
 
-const convertRemoteSvgToPng = async (url) => {
+const convertRemoteSVGToPng = async (url) => {
   return new Promise((resolve) => {
     svg2img(
       url,
@@ -75,7 +75,7 @@ const convertRemoteSvgToPng = async (url) => {
 };
 
 module.exports = {
-  convertRemoteSVGToPng: convertRemoteSvgToPng,
+  convertRemoteSVGToPng: convertRemoteSVGToPng,
   //   downloadAndCovertToPng,
 };
 

@@ -1,6 +1,6 @@
 const axios = require("axios");
 const twit = require("twit");
-const { convertRemoteSvgToPng } = require("./util");
+const { convertRemoteSVGToPng } = require("./util");
 
 const twitterConfig = {
   consumer_key: process.env.CONSUMER_KEY,
@@ -29,7 +29,7 @@ async function tweet(tweetText) {
 // OPTIONAL - use this method if you want the tweet to include the full image file of the OpenSea item in the tweet.
 async function tweetWithImage(tweetText, imageUrl) {
   // Format our image to base64
-  const processedImage = await convertRemoteSvgToPng(imageUrl);
+  const processedImage = await convertRemoteSVGToPng(imageUrl);
 
   // Upload the item's image from OpenSea to Twitter & retrieve a reference to it
   twitterClient.post(
