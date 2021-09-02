@@ -2,6 +2,8 @@ const axios = require("axios");
 const _ = require("lodash");
 const moment = require("moment");
 const { ethers } = require("ethers");
+require("dotenv").config();
+
 const tweet = require("./tweet");
 const cache = require("./cache");
 
