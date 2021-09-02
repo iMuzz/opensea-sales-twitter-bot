@@ -26,6 +26,8 @@ function formatAndSendTweet(event) {
   // OPTIONAL - if you want to tweet a status including the image too
   const imageUrl = _.get(event, ["asset", "image_url"]);
 
+  console.log({ imageUrl });
+
   const isEthSale = tokenSymbol === "WETH" || tokenSymbol === "ETH";
   const formattedEthPrice = ethers.utils.formatEther(totalPrice.toString());
   const formattedUsdPrice = (formattedEthPrice * usdValue).toFixed(2);
