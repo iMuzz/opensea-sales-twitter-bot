@@ -1,5 +1,5 @@
 {
-    "name": "opensea-sales-twitter-bot",
+    "name": "opensea-loot-sales-twitter-bot",
     "version": "1.0.0",
     "description": "Twitter bot tweeting Opensea sales for a given collection",
     "main": "app.js",
