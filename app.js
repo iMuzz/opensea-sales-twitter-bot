@@ -42,15 +42,15 @@ function formatAndSendTweet(event) {
 
   if (isEthSale) {
     tweetText = `
-    ${tokenName} bought for ${formattedEthPrice}Ξ ($${formattedUsdPrice})
-    
-    ${openseaLink}
+${tokenName} bought for ${formattedEthPrice}Ξ ($${formattedUsdPrice})
+
+${openseaLink}
     `;
   } else {
     tweetText = `
-    ${tokenName} bought for ${formattedUsdPrice} ${tokenSymbol}
-    
-    ${openseaLink}
+${tokenName} bought for ${formattedUsdPrice} ${tokenSymbol}
+
+${openseaLink}
     `;
   }
 
